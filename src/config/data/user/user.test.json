@@ -1,0 +1,16 @@
+[
+  {
+    "username": "test.nelp.app.dev@gmail.com",
+    "password": "3718",
+    "email": "test.nelp.app.dev@gmail.com",
+    "roles": "user",
+    "isActive": true
+  },
+  {
+    "username": "test.michael@gmail.com",
+    "password": "3718",
+    "email": "test.michael@gmail.com",
+    "roles": "user",
+    "isActive": false
+  }
+]

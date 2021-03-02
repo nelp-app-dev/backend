@@ -1,0 +1,19 @@
+{
+  "type": "mssql",
+  "host": "10.5.0.100",
+  "port": 1433,
+  "username": "sa",
+  "password": "nelp_sql_3718",
+  "database": "nelp_test",
+  "migrationsTableName": "migration",
+  "entities": [
+    "dist/**/*.entity.js",
+    "dist/**/!(base).entity.js"
+  ],
+  "migrations": [
+    "dist/**/migration/*.js"
+  ],
+  "cli": {
+    "migrationsDir": "src/migration"
+  }
+}

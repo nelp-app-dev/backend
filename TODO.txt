@@ -1,0 +1,3 @@
+x change mssql.client to create multiple connections
+x cleanup roles auth mess
+  database management

@@ -1,0 +1,14 @@
+[
+  {
+    "username": "nelp.app.dev@gamil.com",
+    "password": "3718",
+    "email": "nelp.app.dev@gmail.com",
+    "isActive": true
+  },
+  {
+    "username": "michael@gamil.com",
+    "password": "3718",
+    "email": "michael@gmail.com",
+    "isActive": false
+  }
+]

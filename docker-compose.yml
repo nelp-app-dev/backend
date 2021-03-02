@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  redis:
+    container_name: ${REDIS_DOCKER_NAME}
+    image: 'redis:6.2.0'
+    ports:
+      - ${REDIS_PORT}
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - redis-data:/data
+
+  mssql:
+    container_name: ${MSSQL_DOCKER_NAME}
+    image: 'mcr.microsoft.com/mssql/server:2019-latest'
+    ports:
+      - 1433
+    environment:
+      SA_PASSWORD: '${MSSQL_PASSWORD}'
+      ACCEPT_EULA: 'Y'
+    volumes:
+      - mssql-data:/var/opt/mssql
+    networks:
+      mssql-network:
+        ipv4_address: ${MSSQL_HOST}
+
+volumes:
+  redis-data:
+  mssql-data:
+
+networks:
+  mssql-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${SUBNET}
